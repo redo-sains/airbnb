@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import ToasterProvider from "./providers/ToasterProvider";
 import "./globals.css";
 import { Nunito } from "next/font/google";
+import SearchModal from "./components/modal/SearchModal";
 
 export const metadata = {
   title: "Airbnb",
@@ -33,6 +34,7 @@ export default async function RootLayout({
           <RegisterModal />
           <LoginModal />
           <RentModal />
+          <SearchModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
         <div className="pb-20 pt-28">{children}</div>

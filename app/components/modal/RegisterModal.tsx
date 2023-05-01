@@ -40,7 +40,9 @@ const RegisterModal = (props: Props) => {
     axios
       .post("/api/register", data)
       .then(() => {
+        toast.success("Success!");
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((err) => {
         toast.error("wrong");
@@ -94,13 +96,13 @@ const RegisterModal = (props: Props) => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onclick={() => signIn("google")}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onclick={() => signIn("github")}
+        onClick={() => signIn("github")}
       />
       <div
         className="

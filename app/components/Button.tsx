@@ -4,7 +4,7 @@ import { IconType } from "react-icons/lib";
 
 type Props = {
   label: string;
-  onclick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
   outline?: boolean;
   small?: boolean;
@@ -13,7 +13,7 @@ type Props = {
 
 const Button: React.FC<Props> = ({
   label,
-  onclick,
+  onClick: onclick,
   disabled,
   icon: Icon,
   outline,
